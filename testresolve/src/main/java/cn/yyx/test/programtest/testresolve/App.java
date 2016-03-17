@@ -13,6 +13,6 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        new ASTMain().ParseOneFileAndVisit(new File("D:/Java_RCP_Workspace2/testresolve/src/main/java/cn/yyx/test/files/test.java"));
+        new ASTMain().ParseOneFileAndVisit(new File("D:/git/typeresolve/testresolve/src/main/java/cn/yyx/test/files/test.java"));
     }
 }
