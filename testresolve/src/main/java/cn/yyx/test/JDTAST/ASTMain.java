@@ -45,7 +45,7 @@ public class ASTMain {
 																		// version
 		parser.setCompilerOptions(options);
 
-		String[] sources = { "D:/Java_RCP_Workspace2/testresolve/src/main/java" };
+		String[] sources = { "D:/git/typeresolve/testresolve/src/main/java/cn/yyx/test/files" };
 		String[] classpath = { "C:/Program Files/Java/jdk1.8.0_73/jre/lib/rt.jar", "C:/Users/Administrator.HU7PZ1YCKPVRBDW/.m2/repository/org/eclipse/tycho/org.eclipse.jdt.core/3.11.1.v20150902-1521/org.eclipse.jdt.core-3.11.1.v20150902-1521.jar" };
 		parser.setEnvironment(classpath, sources, new String[] { "UTF-8" }, true);
 		parser.setSource(pdocument.get().toCharArray());

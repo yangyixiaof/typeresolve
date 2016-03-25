@@ -7,8 +7,9 @@ public class test {
 	
 	public String Mett()
 	{
-		// ASTParser parser = ASTParser.newParser(AST.JLS8);
+		ASTParser parser = ASTParser.newParser(AST.JLS8);
 		PPtest.PPtestHa();
+		System.out.println(parser);
 		return "ha ewewo";
 	}
 	
