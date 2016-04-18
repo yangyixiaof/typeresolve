@@ -18,6 +18,7 @@ public class ASTMain {
 
 	@SuppressWarnings("unchecked")
 	public void ParseOneFileAndVisit(File f) {
+		System.out.println("Begin Parse.");
 		String identifier = f.getName();
 		IDocument pdocument = null;
 		try {
