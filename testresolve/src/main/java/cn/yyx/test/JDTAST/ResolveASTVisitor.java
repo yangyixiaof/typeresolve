@@ -7,6 +7,7 @@ import org.eclipse.jdt.core.dom.MethodInvocation;
 
 public class ResolveASTVisitor extends ASTVisitor{
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean visit(MethodDeclaration node) {
 		/*List list = node.parameters();
@@ -23,6 +24,9 @@ public class ResolveASTVisitor extends ASTVisitor{
 		System.out.println("MethodDeclaration:" + node);
 		IMethodBinding rb = node.resolveBinding();
 		System.out.println("ITypeBinding:" + rb);*/
+		System.out.println("MethodDeclaration:" + node);
+		System.out.println("MethodDeclarationReturnType:" + node.getReturnType());
+		System.out.println("MethodDeclarationReturnType2:" + node.getReturnType2());
 		return super.visit(node);
 	}
 	
