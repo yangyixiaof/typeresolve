@@ -2,7 +2,7 @@ package cn.yyx.test.files;
 
 public class test extends Object{
 	
-	public test()
+	public test(String... he)
 	{
 		super();
 	}

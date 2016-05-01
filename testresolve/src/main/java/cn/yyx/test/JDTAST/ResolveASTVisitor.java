@@ -9,11 +9,14 @@ import org.eclipse.jdt.core.dom.Expression;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.MethodInvocation;
+import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
+import org.eclipse.jdt.core.dom.Type;
 import org.eclipse.jdt.core.dom.TypeLiteral;
 
 public class ResolveASTVisitor extends ASTVisitor{
 	
 	@Override
+	@SuppressWarnings("unchecked")
 	public boolean visit(MethodDeclaration node) {
 		/*List list = node.parameters();
 		Iterator<ASTNode> itr = list.iterator();
@@ -29,6 +32,19 @@ public class ResolveASTVisitor extends ASTVisitor{
 		System.out.println("MethodDeclaration:" + node);
 		IMethodBinding rb = node.resolveBinding();
 		System.out.println("ITypeBinding:" + rb);*/
+		
+		List<SingleVariableDeclaration> params = node.parameters();
+		for (SingleVariableDeclaration svd : params)
+		{
+			Type tp = svd.getType();
+			boolean vg = svd.isVarargs();
+			String tpstr = tp.toString();
+			if (vg)
+			{
+				tpstr += "...";
+			}
+			System.out.println("type:" + tpstr);
+		}
 		System.out.println("MethodDeclaration:" + node);
 		// System.out.println("MethodDeclarationReturnType:" + node.getReturnType());
 		System.out.println("MethodDeclarationReturnType2:" + node.getReturnType2());
